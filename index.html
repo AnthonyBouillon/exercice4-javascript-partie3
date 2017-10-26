@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
+    <label for="confirmation">Confirmez : </label><input type="text" name="confirmation"  value="" id="confirmation" />
+    <button type="button"  onclick="verification();" name="button" >Vérification</button>
+  </form>
+  <script>
+  function verification(){
+    // Si la valeur de mon input mot de passe est différent de la valeur de mon input de confirmation
+    if(document.getElementById("motdepasse").value != document.getElementById("confirmation").value){
+      //Mettres les deux en rouge
+      document.getElementById('motdepasse').style.border="5px solid red";
+      document.getElementById('confirmation').style.border="5px solid red";
+    }
+    else {
+      //Sinon les mettres en vert
+      document.getElementById('motdepasse').style.border="5px solid green";
+      document.getElementById('confirmation').style.border="5px solid green";
+    }
+  }
+  </script>
+</body>
+</html>
